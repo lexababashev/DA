@@ -20,13 +20,16 @@ CREATE TABLE country_dim
     freedom_to_make_life_choices      FLOAT,
     perceptions_of_corruption         FLOAT,
     confidence_in_national_government FLOAT,
-    democratic_quality                FLOAT
+    democratic_quality                FLOAT,
+    source_id                         int  default null,
+    start_date                        date default null,
+    end_date                          date default null
 );
 
 CREATE TABLE year_dim
 (
     id     INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `year` INT
+    `year` INT UNIQUE
 );
 
 CREATE TABLE suicide_fact
