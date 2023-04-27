@@ -29,10 +29,11 @@ LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/cleaned-dataset/
 
 
 LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/cleaned-dataset/countries.csv' INTO TABLE countries
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 ROWS
-(country, Region, Population, Area, PopDensity, @skip, NetMigration, InfantMortality, @skip, Literacy, PhonesPer1000,
- @skip, @skip, @skip, Climate, Birthrate, Deathrate, Agriculture, Industry, Service);
+    FIELDS TERMINATED BY ','
+    ENCLOSED BY '"'
+    LINES TERMINATED BY '\n'
+    IGNORE 1 ROWS
+    (country, Region, Population, Area, PopDensity, @skip, NetMigration, InfantMortality, @skip, Literacy,
+     PhonesPer1000,
+     @skip, @skip, @skip, Climate, Birthrate, Deathrate, Agriculture, Industry, Service);
 
